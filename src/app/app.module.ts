@@ -10,6 +10,9 @@ import { NewPostComponent } from './components/new-post/new-post.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { MessagesService } from 'src/app/services/messages.service';
+import { AvatarComponent } from './components/avatar/avatar.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +20,15 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     NewPostComponent,
     TweetComponent,
-    FooterComponent
+    FooterComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
